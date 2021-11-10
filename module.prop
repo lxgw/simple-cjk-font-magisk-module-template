@@ -1,5 +1,5 @@
 # id 只能填 字母 数字 半角符号
-id=FontMMTemplate
+id=FontModuleTemplateS
 name=TTF 字体套用模板（多字重）
 version=Simple v3.3.211110
 versionCode=1
