@@ -1,7 +1,7 @@
 # id 只能填 字母 数字 半角符号
-id=Module-Template
-name=模块模板
-version=v1
+id=FontMMTemplate
+name=TTF 字体套用模板（多字重）
+version=Simple v3.3.211110
 versionCode=1
-author=Petit Abba
-description=一个简短的描述
+author=lxgw (github.com/lxgw)
+description=
