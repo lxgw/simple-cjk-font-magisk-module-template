@@ -6,6 +6,8 @@
 
 本项目为 **Magisk 字体模块模板**的 GitHub 发行项目。该模板用于制作 Magisk 字体模块，支持 9 个字重，每个字重各一个 ttf 文件。在安装 Magisk 的手机上，使用该模板制作字体模块并刷入，更换字体或许会更简便。
 
+有关套用模板的介绍和原理，请看：[（少数派灌水文）为 Android 换上任意喜欢的字体，你可以试试这个 Magisk 模块](https://sspai.com/post/58049)
+
 ## 使用方法
 
 1. 在 [Release](https://github.com/lxgw/simple-cjk-font-magisk-module-template/releases/latest) 界面下载 zip 格式的模块模板 **FontTemplate-Magisk204.zip** *（不要直接选择 Download Zip）* 。
