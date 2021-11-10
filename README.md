@@ -1,34 +1,75 @@
-![bc5c7a34fee614e08839b511a5840873.jpg](https://i.loli.net/2020/01/30/fOFvI2o9KXqEkJr.jpg)
-# Magisk Module 模板
+# CJK Font Magisk Module Template <sup>SIMPLE</sup> </br> CJK 字体 Magisk 模块模板 <sup>简易版</sup>
 
-`这是Magisk模块最基础的结构及说明`
-```
-Magisk-Modules-Template(20.4+).zip
-│
-├── META-INF
-│   └── com
-│       └── google
-│           └── android
-│               ├── update-binary      <--- 这个文件你可以通过下载 module_installer.sh 得到
-│               └── updater-script      <--- 这个文件应仅包含字符串 "#MAGISK"
-│
-├── customize.sh         <--- 这个文件包含 "SKIPUNZIP=0" 如需很多自定义操作 请把0改为1 
-│                                                  customize.sh 由 update-binary 执行(sourced)
-├── module.prop          <--- 这个文件是填写模块信息
-│
-├── post-fs-data.sh        <--- 这个文件可以填写系统启动前想要执行的命令
-│
-├── service.sh             <--- 这个文件可以填写系统启动后想要执行的命令
-│
-├── system.prop            <--- 这个文件将被resetprop读取 挂载改变系统build.prop对应值
-│
-├── ...  /* 模块文件的其余部分 */
-│
-```
-**SKIPUNZIP=0意味着除了重要的文件,其他的文件如果您不需要的话可以删除.**
+> **重要提醒：**
+>
+> 刷机、刷入 Magisk 模块可能会导致系统无法正常启动，请在操作前审慎考虑，并建议备份重要数据。因操作不当导致的系统故障（包括卡开机动画、功能异常等）或效果异常与模块模板作者无关。
 
-**这是 [Magisk 官方新模块模板](https://github.com/HANA-CI-Build-Project/magisk-module-template) 您也可以去看看**
+本项目为 **Magisk 字体模块模板**的 GitHub 发行项目。该模板用于制作替换 Android 系统中 CJK 字体 的 Magisk 模块，在安装 Magisk 的手机上，使用该模板制作字体模块并刷入，更换字体或许会更简便。
 
-**有关模块和存储库的更多信息 请查看 [Magisk 官方文档](https://topjohnwu.github.io/Magisk/guides.html)**
+## 使用方法
 
-感谢 [Pinkdoge](https://github.com/Pinkdoge) 提供相关内容
+1. 在 [Release](release/latest) 界面下载 zip 格式的模块模板 **FontTemplate-Magisk204.zip** *（不要直接选择 Download Zip）* 。
+2. 利用压缩软件 *（电脑上如 7-zip，手机上如 MT 管理器）* 打开模块模板包内的 `/system/fonts` 文件夹，向里面添加 ttf 或 otf 格式的字体文件。字体文件的命名按照第 3 步的指示。
+3. 要使加入的字体能够正常显示，**字体文件须遵循以下命名规则**：
+   - 将字体文件更名为 `fontwx.ttf`，其中 `x` 为表示字重 *（font-weight，字体粗细属性）* 的一位数字（1~9）；
+   - **系统正文调用的基准字重（即 Regular 字重）**，`x` 数值为 4，即字体文件名为 `fontw4.ttf` *（如果是单字重字体，建议命名为 `fontw4.ttf` 再加到模块的 /`system/fonts` 目录中）* ；
+   - **系统标题文本、加粗文本调用的粗字重（即 Bold 字重）**，`x` 数值为 7，即字体文件名为 `fontw7.ttf`；
+   - Light、Medium 字重 `x` 分别为 3 和 5，`x` 越小则字重越细，越大则字重越粗；
+   - 本字体模块模板支持 9 个字重。
+4. 模块根目录的 `module.prop` 用于存放模块信息，如模块的名称、版本号、作者等。
+   - `id`：模块的代号，仅可包括**字母、数字及半角符号，不包含空格**。**相同 id 的 Magisk 模块不能共存。**
+   - `name`：模块名称，可任意填写。
+   - `version`：模块版本，可任意填写。
+   - `versionCode`：模块版本代号，必须为整数型数值。该值用于版本比较。
+   - `author`：模块作者，可任意填写。
+   - `description`：模块描述，可任意填写。
+   - 所有文本文件的行尾应以 **Unix 格式** 书写。
+5. 使用 Magisk 刷入做好的模块，重启。
+
+## 字重测试
+
+<p>
+<span style="font-weight:100">fontw1.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 100 / 纤细 / Thin</span></br>
+<span style="font-weight:200">fontw2.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 200 / 特细 / UltraLight</span></br>
+<span style="font-weight:300">fontw3.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 300 / 细体 / Light</span></br>
+<span style="font-weight:400">fontw4.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 400 / 基准 / Regular</span></br>
+<span style="font-weight:500">fontw5.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 500 / 中等 / Medium</span></br>
+<span style="font-weight:600">fontw6.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 600 / 半粗 / DemiBold</span></br>
+<span style="font-weight:700">fontw7.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 700 / 粗体 / Bold</span></br>
+<span style="font-weight:800">fontw8.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 800 / 特粗 / UltraBold</span></br>
+<span style="font-weight:900">fontw9.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 900 / 超粗 / Heavy</span></br>
+</p>
+<p>
+<span style="font-weight:100">永</span><span style="font-weight:200">永</span><span style="font-weight:300">永</span><span style="font-weight:400">永</span><span style="font-weight:500">永</span><span style="font-weight:600">永</span><span style="font-weight:700">永</span><span style="font-weight:800">永</span><span style="font-weight:900">永</span>
+</p>
+
+
+
+## 注意事项
+
+1. `/system/fonts` 目录内的 **EmptyFont** 为空字体文件，为 Android 默认西文字体 Roboto 的掏空字体，主要提供度量和字重信息，**请勿轻易删除。**
+2. `/system/product/fonts` 内的 **GoogleSans** 亦为空字体文件，用以覆盖类原生 Android 系统内置的 Google Sans 字体，实现所替换字体在类原生 ROM 上的全局覆盖，删除后，原生 Google Sans 字体将保留。
+3. `/system/etc/fonts.xml` 为字体配置文件，已经过调整以调用空字体及自定义字体，经本人所持有的两部 Android 手机测试 *(Redmi Note 5, Pixel Expericence 12.0, Android 12; Redmi K20 Pro, crDroid 7.9, Android 11)* 均可正常使用，**理论上**可兼容 Android 12 和 Android 11，**但不保证所有 ROM 均能正常使用**。不同 ROM 调用字体的配置文件可能不同，请参阅下面的 **「兼容性调整」** 。
+4. **本模块模板最低支持 Magisk 20.4。**
+5. 请不要在用过 Magisk Hide 或者 Zygisk 之后刷入任何字体模块，会导致被选中的应用闪退。
+
+## 兼容性调整 <sub>仅供参考</sub>
+
+为了使该模块模板更加适合您的手机，需要对模块模板内的配置文件进行调整：
+
+- **OPPO/一加 ColorOS：** 将 `/system/etc/fonts.xml` 复制到 `/system/system_ext/etc/` 目录并重命名为 `fonts_base.xml`。
+- **一加 HydrogenOS 11 及以上版本：** 将 `/system/etc/fonts.xml` 复制到相同文件夹，并重命名为 `fonts_base.xml。`
+- **魅族 Flyme：** 将 `/system/etc/fonts.xml` 复制 3 份到相同文件夹，并重命名为以下 3 个文件： `fonts_flyme.xml`、`fonts_inter.xml` 和 `fonts_slate.xml`。
+- **小米 MIUI 12.5：**需刷入 [空字体模块](https://www.coolapk.com/feed/29518682?shareKey=NGU4ODM5Yjk3YjZmNjE4OTNiOTQ~&shareUid=633884&shareFrom=com.coolapk.market_11.4.3)。
+- 如有其他设备的兼容性调整，请在 issue 提出。
+
+## 字体模块模板作者
+
+基于 [Petit-Abba](https://github.com/Petit-Abba)（酷安 [@Kotch / 原名「阿巴酱」](https://www.coolapk.com/u/1132618)） 的 [Magisk-Modules-Template-ge20.4](https://github.com/Petit-Abba/Magisk-Modules-Template-ge20.4) 制作。
+
+- **Telegram：** @lxgwtg
+- **微信公众号：** 霞鹜 *（ID: lxgwshare）*
+- **酷安：** [@落霞孤鹜lxgw](https://www.coolapk.com/u/633884)
+- **微博：** [@孤鹜先森](https://weibo.com/6624339726)
+- **Email：** calxgw2018@gmail.com srtong2006@126.com lxgw1999@qq.com
+
