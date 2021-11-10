@@ -30,22 +30,7 @@
 
 ## 字重测试
 
-<p>
-<span style="font-weight:100">fontw1.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 100 / 纤细 / Thin</span></br>
-<span style="font-weight:200">fontw2.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 200 / 特细 / UltraLight</span></br>
-<span style="font-weight:300">fontw3.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 300 / 细体 / Light</span></br>
-<span style="font-weight:400">fontw4.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 400 / 基准 / Regular</span></br>
-<span style="font-weight:500">fontw5.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 500 / 中等 / Medium</span></br>
-<span style="font-weight:600">fontw6.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 600 / 半粗 / DemiBold</span></br>
-<span style="font-weight:700">fontw7.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 700 / 粗体 / Bold</span></br>
-<span style="font-weight:800">fontw8.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 800 / 特粗 / UltraBold</span></br>
-<span style="font-weight:900">fontw9.ttf：南去经三国，东来过五湖。 Lorem ipsum dolor 900 / 超粗 / Heavy</span></br>
-</p>
-<p>
-<span style="font-weight:100">永</span><span style="font-weight:200">永</span><span style="font-weight:300">永</span><span style="font-weight:400">永</span><span style="font-weight:500">永</span><span style="font-weight:600">永</span><span style="font-weight:700">永</span><span style="font-weight:800">永</span><span style="font-weight:900">永</span>
-</p>
-
-
+[点击此处进入字重测试](https://font.yukonga.top/) （酷安 [@YuKongA / 原名「余空_YuK」](https://www.coolapk.com/u/680367) 制作）
 
 ## 注意事项
 
