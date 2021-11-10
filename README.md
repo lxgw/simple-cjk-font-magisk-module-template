@@ -39,7 +39,7 @@
 3. `/system/etc/fonts.xml` 为字体配置文件，已经过调整以调用空字体及自定义字体，经本人所持有的两部 Android 手机测试 *(Redmi Note 5, Pixel Expericence 12.0, Android 12; Redmi K20 Pro, crDroid 7.9, Android 11)* 均可正常使用，**理论上**可兼容 Android 12 和 Android 11，**但不保证所有 ROM 均能正常使用**。不同 ROM 调用字体的配置文件可能不同，请参阅下面的 **「兼容性调整」** 。
 4. **本模块模板最低支持 Magisk 20.4。**
 5. 请不要在用过 Magisk Hide 或者 Zygisk 之后刷入任何字体模块，会导致被选中的应用闪退。
-6. 想要更加高级的自定义模板，可参阅 [高级版字体模块模板]，可自行搭配西文、中文、日文和韩语字体，同样支持 9 个字重。
+6. 想要更加高级的自定义模板，可参阅 [高级版字体模块模板](https://github.com/lxgw/advanced-cjk-font-magisk-module-template)，可自行搭配西文、中文、日文和韩语字体，同样支持 9 个字重。
 
 ## 兼容性调整 <sub>仅供参考</sub>
 
