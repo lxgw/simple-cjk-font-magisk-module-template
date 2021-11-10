@@ -8,7 +8,7 @@
 
 ## 使用方法
 
-1. 在 [Release](release/latest) 界面下载 zip 格式的模块模板 **FontTemplate-Magisk204.zip** *（不要直接选择 Download Zip）* 。
+1. 在 [Release](https://github.com/lxgw/simple-cjk-font-magisk-module-template/releases/latest) 界面下载 zip 格式的模块模板 **FontTemplate-Magisk204.zip** *（不要直接选择 Download Zip）* 。
 2. 利用压缩软件 *（电脑上如 7-zip，手机上如 MT 管理器）* 打开模块模板包内的 `/system/fonts` 文件夹，向里面添加 ttf 或 otf 格式的字体文件。字体文件的命名按照第 3 步的指示。
 3. 要使加入的字体能够正常显示，**字体文件须遵循以下命名规则**：
    - 将字体文件更名为 `fontwx.ttf`，其中 `x` 为表示字重 *（font-weight，字体粗细属性）* 的一位数字（1~9）；
