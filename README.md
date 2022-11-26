@@ -13,7 +13,7 @@
 1. 在 [Release](https://github.com/lxgw/simple-cjk-font-magisk-module-template/releases/latest) 界面下载 zip 格式的模块模板 **FontTemplate-Magisk204.zip** *（不要直接选择 Download Zip）* 。
 2. 利用压缩软件 *（电脑上如 7-zip，手机上如 MT 管理器）* 打开模块模板包内的 `/system/fonts` 文件夹，向里面添加 ttf 或 otf 格式的字体文件。字体文件的命名按照第 3 步的指示。
 3. 要使加入的字体能够正常显示，**字体文件须遵循以下命名规则**：
-   - 将字体文件更名为 `fontwx.ttf`，其中 `x` 为表示字重 *（font-weight，字体粗细属性）* 的一位数字（1~9）；
+   - 将字体文件更名为 `fontwx.ttf`（注意扩展名为 **ttf**！！当然您也可以进 fonts.xml 把 ttf 改为 otf），其中 `x` 为表示字重 *（font-weight，字体粗细属性）* 的一位数字（1~9）；
    - **系统正文调用的基准字重（即 Regular 字重）**，`x` 数值为 4，即字体文件名为 `fontw4.ttf` *（如果是单字重字体，建议命名为 `fontw4.ttf` 再加到模块的 `/system/fonts` 目录中）* ；
    - **系统标题文本、加粗文本调用的粗字重（即 Bold 字重）**，`x` 数值为 7，即字体文件名为 `fontw7.ttf`；
    - Light、Medium 字重 `x` 分别为 3 和 5，`x` 越小则字重越细，越大则字重越粗；
