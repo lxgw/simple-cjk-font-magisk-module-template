@@ -58,10 +58,8 @@
 5. 将制作好的模块压缩包通过 Magisk 刷入，重启设备即可生效。
 
 ## 字重测试
-
-[点击此处进入字重测试](https://font.yukonga.top/)，[@YuKongA](https://github.com/YuKongA/) 制作提供。*（酷安 [@YuKongA](https://www.coolapk.com/u/680367) 已注销。）*
-
-## 注意事项
+ 
+[点击此处进入字重测试](https://font.yukonga.top/)，[@YuKongA](https://github.com/YuKongA/)（酷安 [@YuKong_A](http://www.coolapk.com/u/27385711)）制作提供。
 
 ## 注意事项
 
