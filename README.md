@@ -13,7 +13,7 @@
 > 
 > **💡 建议**
 > - 如果您在使用过程中遇到问题，可参考下方 **「兼容性调整」** 章节（部分信息可能已过时，仅供参考），或改用**其他仍在维护的字体模块模板**，亦可直接使用他人的**可用成品字体模块**并替换其中的字体文件（替换前需确认目标模块的字体配置文件中所引用的文件名及扩展名，将自己的字体文件重命名为与之完全一致即可）。
-> - **如需二次开发，请直接移步 [高级版字体模块模板](https://github.com/lxgw/advanced-cjk-font-magisk-module-template)**。
+> - **如需二次开发或贡献代码，请直接移步 [高级版字体模块模板](https://github.com/lxgw/advanced-cjk-font-magisk-module-template)**（本仓库已归档，不接受 pull request）。
 
 # CJK Font Magisk Module Template <sup>SIMPLE</sup> </br> CJK 字体 Magisk 模块模板 <sup>简易版</sup>
 
